@@ -3,11 +3,11 @@
 // 학습 용량 문제로 10% 밖에 활용하지 못함.
 
 - DataSet preprocessing : Dacon 경진대회의 이야기연구소 주식회사에서 공유한 코드 사용
-[ https://dacon.io/codeshare/4047?dtype=recent
-* 아래와 같이 내가 사용하는 모델에 맞게 또는 검증 부분에서 확인된 오류 부분을 수정
-//* 기존 코드
+[https://dacon.io/codeshare/4047?dtype=recent
+// 아래와 같이 내가 사용하는 모델에 맞게 또는 검증 부분에서 확인된 오류 부분을 수정
+// 기존 코드
     reporter_pattern = re.compile(r"^\/?([가-힣]+)\s?(기자|팀)?\s*\.?$")
-//* 수정 코드
+// 수정 코드
     reporter_pattern = re.compile(r"^\/?([가-힣]+)\s?(기자|팀)+\s*\.?$")
 ]
 - Model : AI Hub 문서요약 텍스트에서 제공한 AI모델 중 bertsumabs를 사용
