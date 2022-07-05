@@ -20,11 +20,13 @@
 ## Test
 - gold(target data)와 candidate(predict data)를 자체 검증
 > 잘 요약된 문장도 있지만, 내용을 잘못 혼합한 문장, target에 비해 길이가 훨씬 긴 문장 등 보완이 필요해 보임.
+- 낮은 Rouge 점수는 위의 이유가 클듯.
 - 더 좋은 결과를 얻기 위해선?
 > 전체의 10%의 데이터가 아닌 더 많은 데이터를 학습에 이용
 >> train 과정에서 더 좋은 성능을 낼 parameter를 적용하여 학습
 >>> bertsumext 또한 진행하여 bertsumabs의 encoder에 ext를 finetuning하는 bertsumextabs를 수행
->>>> 예측 문장의 최소길이를 보완(현재 50)
+>>>> 요약을 위해 고안된 Pegasus 모델 사용
+>>>>> 예측 문장의 최소길이를 보완(현재 50)
 
 ## Project
 - 모델의 코드를 다방면으로 수정 
