@@ -37,3 +37,8 @@
 - 현재, Django 웹프레임워크를 이용하여 구현하려고 하는데 문제 발생
 > 본인의 Windows에서의 Python 버전으로는 구현하는데 있어, 각 package들 버전이 호환 불가한 문제 발생
 >> 이를 해결하기 위해 CI에 대한 학습을 진행 중에 있음.
+
+## Next Project
+- 영상의 내용을 요약?
+> Input(영상) -> STT -> Ext or Abs summary
+>> Train Set에 대한 문제점 -> 직접 구현..? (시간적 한계)..
