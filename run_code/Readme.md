@@ -6,9 +6,9 @@
 >https://dacon.io/codeshare/4047?dtype=recent
 >> 아래와 같이 내가 사용하는 모델에 맞게 또는 검증 부분에서 확인된 오류 부분을 수정
 >>> 기존 코드
->> reporter_pattern = re.compile(r"^\/?([가-힣]+)\s?(기자|팀)?\s*\.?$")
+>>>> reporter_pattern = re.compile(r"^\/?([가-힣]+)\s?(기자|팀)?\s*\.?$")
 >>> 수정 코드
->> reporter_pattern = re.compile(r"^\/?([가-힣]+)\s?(기자|팀)+\s*\.?$")
+>>>> reporter_pattern = re.compile(r"^\/?([가-힣]+)\s?(기자|팀)+\s*\.?$")
 >>> 등
     
 ## Model
