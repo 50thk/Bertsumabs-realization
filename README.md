@@ -1,2 +1,2 @@
-# Bertsumabs-realization
+# KoBertsumabs
 Using SKT KoBert
