@@ -13,8 +13,8 @@
 1. AI Hub 문서요약 텍스트에서 제공한 AI모델 중 bertsumabs를 사용
 - 모델 소개 영상에서 공유된 .bat 파일의 실행영상밖에 공유가 되지 않았기 때문에 preprocess, train, test에 적합한 데이터를 가공하여 적용시키기 위해 오픈소스 모델을 리뷰 및 수정하며 진행했습니다.
 - data_loader.py 에서 pytorch update에 따른 boolean matrix problem 수정
->   mask = 1 - (src == 0) -> mask = ~(src == 0)
->>   mask_cls = 1 - (clss == -1) -> mask_cls = ~(clss == -1)
+    - mask = 1 - (src == 0) -> mask = ~(src == 0)
+    - mask_cls = 1 - (clss == -1) -> mask_cls = ~(clss == -1)
 
 2. 전체 데이터의 10%에서 80%를 Train으로, 10%, 10%를 각각 Validate, Test Set로 진행함.
 - 용량, 시간, 비용 문제
@@ -24,11 +24,11 @@
 - 잘 요약된 문장도 있지만, 내용을 잘못 혼합한 문장, target에 비해 길이가 훨씬 긴 문장 등 보완이 필요해 보임.
 - 낮은 Rouge 점수는 위의 이유가 클듯.
 - 더 좋은 결과를 얻기 위해선?
-> 전체의 10%의 데이터가 아닌 더 많은 데이터를 학습에 이용
->> train 과정에서 더 좋은 성능을 낼 parameter를 적용하여 학습
->>> bertsumext 또한 진행하여 bertsumabs의 encoder에 ext를 finetuning하는 bertsumextabs를 수행
->>>> 요약을 위해 고안된 Pegasus 모델 사용
->>>>> 예측 문장의 최소길이를 보완(현재 50)
+    - 전체의 10%의 데이터가 아닌 더 많은 데이터를 학습에 이용
+    - train 과정에서 더 좋은 성능을 낼 parameter를 적용하여 학습
+    - bertsumext 또한 진행하여 bertsumabs의 encoder에 ext를 finetuning하는 bertsumextabs를 수행
+    - 요약을 위해 고안된 Pegasus 모델 사용
+    - 예측 문장의 최소길이를 보완(현재 50)
 
 ## Project
 1. 모델의 코드를 다방면으로 수정 
