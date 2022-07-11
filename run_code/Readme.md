@@ -12,6 +12,9 @@
 ## Model
 1. AI Hub 문서요약 텍스트에서 제공한 AI모델 중 bertsumabs를 사용
 - 모델 소개 영상에서 공유된 .bat 파일의 실행영상밖에 공유가 되지 않았기 때문에 preprocess, train, test에 적합한 데이터를 가공하여 적용시키기 위해 오픈소스 모델을 리뷰 및 수정하며 진행했습니다.
+- data_loader.py 에서 pytorch update에 따른 boolean matrix problem 수정
+>   mask = 1 - (src == 0) -> mask = ~(src == 0)
+>>   mask_cls = 1 - (clss == -1) -> mask_cls = ~(clss == -1)
 
 2. 전체 데이터의 10%에서 80%를 Train으로, 10%, 10%를 각각 Validate, Test Set로 진행함.
 - 용량, 시간, 비용 문제
@@ -38,6 +41,8 @@
 - 이를 해결하기 위해 CI에 대한 학습을 진행 중에 있음.
 
 ## Next Project
-1. 영상의 내용을 요약?
+1. project를 위해 수정한 bertsum_project 모델을 bertsum의 parameter를 수정했을 때 작동하도록 하나의 파일로 모듈화
+2. compas CCTV 최적입지 선정 경진대회
+3. 영상의 내용을 요약?
 - Input(영상) -> STT -> Ext or Abs summary
 - Train Set에 대한 문제점 -> 직접 구현..? (시간적 한계).. 뉴스 요약을 학습시킨 모델로 fine tuning 한다면?
