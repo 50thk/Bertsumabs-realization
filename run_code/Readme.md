@@ -31,9 +31,10 @@
     - 예측 문장의 최소길이를 보완(현재 50)
 
 ## Project
-1. 모델의 코드를 다방면으로 수정 
+1. 기존 소스의 코드는 하나의 Input을 받아 하나의 Output을 내기에 적절치 않음. 모델의 코드를 다방면으로 수정
+- 여러 Input data를 하나씩 불러와 수행하는 부분과 Output과 관련된 predict 및 src, target data를 파일로 저장시키는 부분 등 필요치 않은 부분 삭제 및 수정
 2. 들어오는 데이터는 각 문장이 나누어져 있지 않기 때문에 kss 패키지를 통해 문장을 분리
-3. news(input data) -> split sentences -> bertdata -> bertsumabs / 추가적으로 news data를 전처리하는 과정도 필요할 것임.
+3. news(input data) -> split sentences -> bertdata -> bertsumabs / 추가적으로 news data를 전처리하는 과정도 필요할 것임(email, 기자, 광고문구 등).
 4. dash를 이용한 웹 구현
 > [https://github.com/raqoon886/KorBertSum](https://github.com/raqoon886/KorBertSum/blob/master/Newsdata_summarybot.ipynb)의 코드를 수정하여 사용하였음.
 5. 현재, Django 웹프레임워크를 이용하여 구현하려고 하는데 문제 발생
@@ -42,7 +43,8 @@
 
 ## Next Project
 1. project를 위해 수정한 bertsum_project 모델을 bertsum의 parameter를 수정했을 때 작동하도록 하나의 파일로 모듈화
-2. compas CCTV 최적입지 선정 경진대회
-3. 영상의 내용을 요약?
+2. 음성합성 알고리즘 Task (Tacotron2)
+3. compas CCTV 최적입지 선정 경진대회
+4. 영상의 내용을 요약?
     - Input(영상) -> STT -> Ext or Abs summary
     - Train Set에 대한 문제점 -> 직접 구현..? (시간적 한계).. 뉴스 요약을 학습시킨 모델로 fine tuning 한다면?
