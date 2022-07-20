@@ -32,8 +32,8 @@
 
 ## Project
 1. 기존 소스의 코드는 하나의 Input을 받아 하나의 Output을 내기에 적절치 않음. 모델의 코드를 다방면으로 수정
-- 여러 Input data를 하나씩 불러와 수행하는 부분과 Output과 관련된 predict 및 src, target data를 파일로 저장시키는 부분 등 필요치 않은 부분 삭제 및 수정
-- data_builder, predictor, train_abstractive py 파일을 중점으로 수정을 진행했음.
+    - 여러 Input data를 하나씩 불러와 수행하는 부분과 Output과 관련된 predict 및 src, target data를 파일로 저장시키는 부분 등 필요치 않은 부분 삭제 및 수정
+    - data_builder, predictor, train_abstractive py 파일을 중점으로 수정을 진행했음.
 2. 들어오는 데이터는 각 문장이 나누어져 있지 않기 때문에 kss 패키지를 통해 문장을 분리
 3. news(input data) -> split sentences -> bertdata -> bertsumabs / 추가적으로 news data를 전처리하는 과정도 필요할 것임(email, 기자, 광고문구 등).
 4. dash를 이용한 웹 구현
