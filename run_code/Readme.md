@@ -33,13 +33,14 @@
 ## Project
 1. 기존 소스의 코드는 하나의 Input을 받아 하나의 Output을 내기에 적절치 않음. 모델의 코드를 다방면으로 수정
 - 여러 Input data를 하나씩 불러와 수행하는 부분과 Output과 관련된 predict 및 src, target data를 파일로 저장시키는 부분 등 필요치 않은 부분 삭제 및 수정
+- data_builder, predictor, train_abstractive py 파일을 중점으로 수정을 진행했음.
 2. 들어오는 데이터는 각 문장이 나누어져 있지 않기 때문에 kss 패키지를 통해 문장을 분리
 3. news(input data) -> split sentences -> bertdata -> bertsumabs / 추가적으로 news data를 전처리하는 과정도 필요할 것임(email, 기자, 광고문구 등).
 4. dash를 이용한 웹 구현
 > [https://github.com/raqoon886/KorBertSum](https://github.com/raqoon886/KorBertSum/blob/master/Newsdata_summarybot.ipynb)의 코드를 수정하여 사용하였음.
 5. 현재, Django 웹프레임워크를 이용하여 구현하려고 하는데 문제 발생
     - 본인의 Windows에서의 Python 버전으로는 구현하는데 있어, 각 package들 버전이 호환 불가한 문제 발생
-    - 이를 해결하기 위해 CI에 대한 학습을 진행 중에 있음.
+    - 이를 해결하기 위한 방법 물색
 
 ## Next Project
 1. project를 위해 수정한 bertsum_project 모델을 bertsum의 parameter를 수정했을 때 작동하도록 하나의 파일로 모듈화
