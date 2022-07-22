@@ -12,5 +12,5 @@
 
 # 시연 예)
 
-![process](https://github.com/50thk/KoBertsumabs/process.gif)
-![result](https://github.com/50thk/KoBertsumabs/result.gif)
+![process](https://user-images.githubusercontent.com/88871309/180492227-03300497-7c02-4e8c-852a-5f4c5c368b83.gif)
+![result](https://user-images.githubusercontent.com/88871309/180492245-c384af0a-3229-459a-be08-0b4247ec63a7.gif)
