@@ -28,7 +28,6 @@
     - train 과정에서 더 좋은 성능을 낼 parameter를 적용하여 학습
     - bertsumext 또한 진행하여 bertsumabs의 encoder에 ext를 finetuning하는 bertsumextabs를 수행
     - 요약을 위해 고안된 Pegasus 모델 사용
-    - 예측 문장의 최소길이를 보완(현재 50)
 
 ## Project
 1. 기존 소스의 코드는 하나의 Input을 받아 하나의 Output을 내기에 적절치 않음. 모델의 코드를 다방면으로 수정
