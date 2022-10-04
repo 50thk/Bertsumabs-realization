@@ -43,8 +43,3 @@
 
 ## Next Project
 1. project를 위해 수정한 bertsum_project 모델을 bertsum의 parameter를 수정했을 때 작동하도록 하나의 파일로 모듈화
-2. 음성합성 알고리즘 Task (Tacotron2)
-3. compas CCTV 최적입지 선정 경진대회
-4. 영상의 내용을 요약?
-    - Input(영상) -> STT -> Ext or Abs summary
-    - Train Set에 대한 문제점 -> 직접 구현..? (시간적 한계).. 뉴스 요약을 학습시킨 모델로 fine tuning 한다면?
